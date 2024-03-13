@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>好きなことの紹介ページ</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon_mie.png" />
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <header class="home-header">
+    <!--ハンバーガーメニュー-->
+    <div class="menu-container">
+      <button class="menu-btn" onmouseenter="showMenuOnHover()" onmouseleave="hideMenuOnHover()">
+        <img src="images/menulogo.png" alt="Menu Icon">
+      </button>
+      <div class="menu-items" id="menuItems" style="display: none;">
+        <ul class="menu-list">
+          <li><a href="#aboutmie">三重県の概要</a></li>
+          <li><a href="http://localhost/kadai_segi0313/greens.php">自然</a></li>
+          <li><a href="http://localhost/kadai_segi0313/foods.php">食</a></li>
+          <li><a href="http://localhost/kadai_segi0313/contact.php">お問い合わせフォーム</a></li>
+          <li><a href="http://localhost/kadai_segi0313/manage.php">お問い合わせ管理ページ</a></li>
+          <li><a href="http://localhost/kadai_segi0313/comment.php">来訪者の声</a></li>
+        </ul>
+      </div>
+    </div>
+  <!--ロゴ画像タイトル-->
+    <div class="menu-title">
+        <h1><img class="logo_img" src="images/logo_mie.png" alt="地図タイトル"></a></h1>
+        <h1><img class="logo_title" src="images/logo_text.png" alt="スルッと三重"></a></h1>
+    </div>
+  </header>
+<main>
+  <!-- concept -->
+  <section  id="aboutmie" class="concept">
+    <h2>～ Mieについて ～</h2><br>
+    <div class="container">    <!--desc（text）とimg-->  
+      <div class="concept_desc">
+        <div class="subtitle">名称の由来</div>
+          <h3 class="title">倭健命<br>(やまとたけるのみこと)</h3>
+        <div class="text">
+          <p>『古事記』には、倭健命(やまとたけるのみこと)は東国平定の長い戦からの帰途、 桑名郡尾津の浜から熊褒野（のぼの）へ向かう途中、しだいに弱ってきた命は｢<span class="marker1">わが足三重のまかりなして</span>、 いと疲れたり｣と語ったことがきっかけ...とあるそうです。<span class="marker1">足が '三重に折れ曲がる' </span>ニュアンスなのですね。<br><br></p>
+        </div>
+      </div>
+      <div class="concept_img">
+        <img src="images/yamatotakeru.jpg" alt="ヤマトタケル">
+      </div>
+    </div>
+    <div class="container">
+      <div class="concept_img">
+        <img src="images/shirochidori.webp" alt="シロチドリ">
+      </div>
+      <div class="concept_desc">
+        <div class="subtitle">三重県の地勢・シンボル等</div>
+          <h3 class="title">県の鳥　 シロチドリ</h3>
+        <div class="text">
+          <p>
+            面積　	約5,800km2（全国第25位）<br>
+            森林面積比率　	65%程度（H19年度末）<br>
+            人口　	170万人程度（全国第22位）<br>
+            県の花　	ハナショウブ（花言葉：優しい心 など）<br>
+            県のさかな　	伊勢えび	</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">      
+      <div class="concept_desc">
+        <div class="subtitle">三重は何地方？</div>
+          <h3 class="title">国土形成計画法では<br>「中部圏」</h3>
+        <div class="text">
+          <p>法令面では、<br>・近畿圏整備法における「<span class="marker1">近畿圏</span>」<br>
+            ・中部圏開発整備法における「<span class="marker1">中部圏</span>」 <br>
+            のいずれにも三重県は指定されています。地方の区分では、法律等で一律に定められている訳ではなく、 
+            歴史的背景や地理的条件、経済的・社会的関係などを考慮し、適宜分類されているようです。<br><br></p>
+        </div>
+      </div>
+      <div class="concept_img">
+        <img src="images/kinki_mie.png" alt="地方図">
+      </div>
+    </div><br><br>
+  </section>
+  <!-- celebrities -->
+  <div class="celebrities">
+    <h2>出身有名人（一部、五十音順）</h2><br>
+    <table cellpadding="10">
+      <tr><td>浅尾美和</td><td>スポーツ選手</td><td>ビーチバレー</td></tr>
+      <tr><td>浅野拓磨</td><td>スポーツ選手</td><td>サッカー</td></tr>
+      <tr><td>あべ静江</td><td>歌手</td><td></td></tr>
+      <td>磯野貴理子</td><td>俳優</td><td></td></tr>
+      <tr><td>江戸川乱歩</td><td>小説家・推理作家</td><td></td></tr>
+      <tr><td>小倉久寛</td><td>俳優・声優等</td><td></td></tr>
+      <tr><td>小津 安二郎</td><td>映画監督・脚本家</td><td></td></tr>
+      <tr><td>幸阪茉里乃</td><td>アイドル</td><td>櫻坂46</td></tr>
+      <tr><td>椎名 桔平</td><td>俳優</td><td></td></tr>
+      <tr><td>瀬古 利彦</td><td>スポーツ選手</td><td>マラソン</td></tr>
+      <tr><td>土性 沙羅</td><td>スポーツ選手</td><td>レスリング</td></tr>
+      <tr><td>鳥羽 一郎</td><td>演歌歌手</td><td>山川豊の実兄</td></tr>
+      <tr><td>西野カナ</td><td>歌手・作詞家</td><td></td></tr>
+      <tr><td>平井堅</td><td>歌手・作詞家</td><td></td></tr>
+      <tr><td>山川 豊</td><td>演歌歌手</td><td>兄弟船</td></tr>
+      <tr><td>吉田沙保里</td><td>スポーツ選手</td><td>レスリング</td></tr>
+      <tr><td>渡瀬 マキ</td><td>歌手・タレント</td><td>LINDBERG</td></tr>
+    </table>
+  </div>
+  </main>
+  <!--ページトップボタン（CSS版）-->
+  <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>  
+  <!-- footer -->
+  <footer class="footer">
+    <div class="logo"><a href="https://jisouswitch.jp/"><img src="images/jisouswitch.png" alt="JISOU_SWITCH"></a></div>
+    <div class="copyright">&copy; 2024 JISOU SWITCH</div>
+  </footer>
+  <!-- /footer -->
+</body>
+</html>

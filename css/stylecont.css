@@ -1,0 +1,286 @@
+@charset "utf-8";
+img {
+  width: 100%;
+}
+body {
+  max-width: 100%;
+}
+header {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+header h2 {
+  font-size: 22px;
+}
+/*/////////////////////////////////////////////////////////////////////////*/
+/*　共通　リンクボタン　*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.cont-button-container {  /* 横並びのボタン */
+  margin-top: 30px;
+  display: flex; /* 要素を横並びにする */
+  justify-content: center; /* コンテンツを中央寄せにする */
+}
+.cont-button-container a {
+  text-align: center;
+  display: inline-block; /* ボタンをブロック要素として表示 */
+  padding: 10px 20px; /* パディングを追加 */
+  margin: 0 10px; /* ボタン間のマージンを設定 */
+  background-color: #007bff; /* ボタンの背景色 */
+  color: #fff; /* ボタンの文字色 */
+  text-decoration: none; /* リンクの下線を非表示 */
+  border-radius: 5px; /* ボタンの角丸を設定 */
+  transition: background-color 0.3s ease; /* 背景色の変化をスムーズにするトランジション */
+}
+.cont-button-container a:hover {
+  background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*お問い合わせフォーム*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.wrap {
+  display: flex;
+  width: 60%;
+  height: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 5px solid skyblue;
+  border-radius: 15px;
+}
+#nav {
+  display: inline-block;
+  flex: 1.5;
+  text-align: center;
+/*border: 5px solid rgb(73, 211, 45);*/
+}
+#logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 30px;
+}
+#logo img {
+}
+main {
+  flex: 8.5;
+  margin: 0 auto;  
+}
+#contname {
+	width: 90%;
+	height: 30px;
+  border: 2px solid rgb(196, 193, 188);
+  border-radius: 10px;
+}
+#contemail {
+	width: 90%;
+	height: 30px;
+  border: 2px solid rgb(196, 193, 188);
+  border-radius: 10px;
+}
+#conttext {  /* content入力欄 //////////////////////////////////////////////////////////*/
+	width: 90%;
+	height: 300px;
+  margin-top: 10px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-left: 15px;
+  border: 2px solid rgb(196, 193, 188);
+  border-radius: 10px;
+}
+#contformbtn {
+  display: block;
+  margin: 0 auto;
+}
+.input-field {
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+}
+.input-valid {
+    background-color: rgb(214, 245, 214);
+}
+.input-invalid {
+    background-color: rgba(235, 187, 235, 0.959);
+}
+
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*問い合わせ管理ページ*/
+/*/////////////////////////////////////////////////////////////////////////*/
+#contactList {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-y: auto;  /*///////////////////////////////////////////////////// 縦方向のスクロールバーを有効 */
+  max-height: 450px; /*//////////////////////////////////////////////////////スクロールバー出現高さ */
+  /*border: 2px solid blue;*/
+}
+.show-full-text-btn, .show-simple-text-btn {
+  font-size: 10px;
+  position: absolute;
+  right: 0;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.full-text {
+  float: left; /* テキストを左寄せ */
+  width: 80%; /* ボタンの幅に依存しない適切な幅を設定 */
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px; /* フォントサイズの設定 */
+  align-items: center;
+}
+th, td {
+  border: 1px solid black; /* 罫線の設定 */
+  padding: 4px; /* セル内の余白の設定 */
+  text-align: center; /* 文字の中央揃え */
+  vertical-align: middle; /* 上下中央寄せ */
+}
+th {
+  background-color: #f2f2f2; /* ヘッダーの背景色 */
+}
+.titlehidden {
+  background-color: #f0778b;
+}
+.titlevisible {
+  background-color: #8bec8b;
+}
+/* トグルスイッチ（スライダー＋ボール）のスタイル */
+/* トグルスイッチのスタイル */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 56px;  /*スライダー枠：ボール径との兼ね合い*/
+  height: 30px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {  /* スライダーのスタイル */
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 30px;
+}
+.slider:before {  /* ボールのスタイル */
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {  /* ボールのON時のスタイル */
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+}
+.contemail-column {
+  text-align: left;
+}
+.conttext-column {
+  position: relative;
+  text-align: left;
+  align-items: center;
+  color: black;
+  background-color: transparent;
+}
+.comment-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.green-bg {  /*表示中：黄色*/
+  background-color: #ccf0cc; /* 緑色 */
+}
+.red-bg {
+  background-color: #f7c2cb; /* 赤色 */
+}
+
+/*/////////////////////////////////////////////////////////////////////////*/
+/*コメントセクション・来訪者の声ページ*/
+/*/////////////////////////////////////////////////////////////////////////*/
+.main2 {
+  width: 80%;
+  margin: 0 auto;
+}
+.customerPhoto {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.customerPhoto img {
+  width: 20%;
+  height: auto;
+  display: block;
+  position: absolute;
+  border-radius: 5px;  
+}
+.commentSection {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /*border: 2px solid blue;*/
+}
+#commentSection {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  /*border: 2px solid blue;*/
+}
+/*--------------------------------
+ フッター
+---------------------------------*/
+.footer {
+  transform: translateY(150px);
+  max-width: 1600px;
+  background-color: #494141;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  /*border: 2px solid rgb(240, 19, 11);*/
+}
+.footer .logo img {
+  width: 50px;
+  display: inline-block;
+  margin: 0 10px;
+  height: auto;
+  transform: rotate( -15deg );
+}
+.footer .copyright {
+  display: inline-block;
+  font-size: 16px;
+  /*letter-spacing: 0.05em;*/
+  color: #dad5d5;
+  text-align: left;
+  /*border: 2px solid rgb(11, 137, 240);*/
+}
